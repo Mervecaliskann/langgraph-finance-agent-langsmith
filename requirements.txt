@@ -3,5 +3,6 @@ yfinance
 langchain-groq
 langchain-community
 langchain-core
+langgraph
 python-dotenv
 plotly
