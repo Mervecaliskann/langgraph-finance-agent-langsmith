@@ -10,17 +10,22 @@ Output:
 - Console summary  : average overall score + tool-selection accuracy %
 """
 
-import csv
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://eu.api.smith.langchain.com"
+os.environ["LANGCHAIN_PROJECT"] = "finance-agent-eval"
+# LANGCHAIN_API_KEY zaten .env'den load_dotenv() ile geliyor, tekrar set etme.
+
+import csv
 import re
 
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from langgraph_agent import run as run_agent
-
-load_dotenv()
 
 # A smaller/different Llama model acts as the judge so it's not grading
 # its own homework with the exact same weights as the agent.

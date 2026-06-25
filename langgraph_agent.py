@@ -100,7 +100,7 @@ class AgentState(TypedDict):
 # 3. LLM
 # ---------------------------------------------------------
 def get_llm():
-    return ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    return ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
 
 FETCH_SYSTEM_PROMPT = """You are a financial data retrieval assistant.
@@ -114,6 +114,7 @@ Rules:
 - If multiple companies are mentioned (e.g. comparisons), call the relevant tool(s) once per company.
 - Convert company names to their stock ticker symbols (e.g. Apple -> AAPL, Google -> GOOGL, Meta -> META, Tesla -> TSLA, Microsoft -> MSFT, Amazon -> AMZN, Nvidia -> NVDA, Netflix -> NFLX, Coca-Cola -> KO).
 - Always call at least one tool. Do not answer directly without calling a tool.
+- When you need data for multiple companies, call tools one at a time sequentially, never call multiple tools in parallel in a single message.
 """
 
 REPORT_SYSTEM_PROMPT = """You are a Senior Financial Analyst AI.
