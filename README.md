@@ -35,8 +35,8 @@ A real-time financial analysis agent powered by **Llama-3.3 (Groq)** and **Yahoo
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/Mervecaliskann/finance-agent-langgraph.git
-    cd finance-agent-langgraph
+    git clone https://github.com/Mervecaliskann/langgraph-finance-agent-langsmith.git
+    cd langgraph-finance-agent-langsmith
     ```
 
 2.  **Install dependencies:**
