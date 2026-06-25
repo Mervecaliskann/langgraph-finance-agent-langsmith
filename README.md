@@ -116,5 +116,12 @@ Run it:
 python eval.py
 ```
 
+## 📊 LangSmith Observability
+
+Both the agent (`langgraph_agent.py`) and the eval pipeline (`eval.py`) are instrumented with **LangSmith** tracing, so every run — tool calls, intermediate state, and the final report — can be inspected in the LangSmith dashboard.
+
+![LangSmith Monitoring](assets/langsmith-monitoring.png)
+![LangSmith Trace](assets/langsmith-trace.png)
+
 ---
 *Developed by Merve Çalışkan*
