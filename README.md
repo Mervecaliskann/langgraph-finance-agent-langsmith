@@ -123,5 +123,9 @@ Both the agent (`langgraph_agent.py`) and the eval pipeline (`eval.py`) are inst
 ![LangSmith Monitoring](assets/langsmith-monitoring.png)
 ![LangSmith Trace](assets/langsmith-trace.png)
 
+### Datasets & Experiments
+![Experiments Overview](assets/langsmith-experiments.png)
+![Experiment Detail - 14 Questions Scored](assets/langsmith-experiment-detail.png)
+
 ---
 *Developed by Merve Çalışkan*
